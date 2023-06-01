@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root, .App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1, h2{
+ margin:20px;
+}
+
+.square-row {
+  display: flex;
+  flex-direction: row;
+}
+.square {
+  background-color: #fff;
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: 500;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+.btn {
+  width: fit-content;
+  height: fit-content;
+  padding:5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #ddd;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
