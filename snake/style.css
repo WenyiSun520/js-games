@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+}
+
+body {
+  background-color: darkslateblue;
+}
+#game-board {
+  background-color: whitesmoke;
+  width: 50vmin;
+  height: 50vmin;
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+}
+
+.snake{
+    background-color: blue;
+    border: 0.25vmin solid black;
+}
+.food{
+    background-color: yellow;
+    border: 0.25vmin solid black;
+}
+.number {
+  font-size: 24px;
+  font-weight: 500;
+}
+#replay, #pause {
+  width: 200px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: purple;
+  opacity: 0.8;
+}
