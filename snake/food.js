@@ -6,7 +6,6 @@ let food = {
 const EXPANSTION_RATE = 1; // the snake will growth by 1 when it eat one food
 let currentSore = 0;
 
-
 export function update() {
   if (onSnake(food)) {
     bodyExpand(EXPANSTION_RATE);
@@ -26,8 +25,17 @@ export function render(gameBoard) {
   gameBoard.appendChild(foodElement);
 }
 
-function updateScore(){
-    currentSore += EXPANSTION_RATE;
-    document.querySelector(".number").innerHTML = currentSore;
+function updateScore() {
+  currentSore += EXPANSTION_RATE;
+  document.querySelector(".number").innerHTML = currentSore;
+}
 
+export function updateHighestScore() {
+  let highestScore = localStorage.getItem("highestScore");
+  if (currentSore >= highestScore) {
+    localStorage.setItem("highestScore", currentSore);
+    document.querySelector(".number-highest").innerHTML = currentSore;
+  }
+  document.querySelector(".number-highest").innerHTML = highestScore;
+  console.log("highest score: ", highestScore);
 }

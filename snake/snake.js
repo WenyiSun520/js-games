@@ -1,6 +1,42 @@
-export const SNAKE_SPEED = 5; // the snake will move 2 times per seconds
+export let SNAKE_SPEED = 2.5; // the snake will move 2 times per seconds
+const snakeSpeed = [2.5, 5, 6, 7, 8, 9, 10, 11,12,13];
 const snakeBody = [{ x: 11, y: 11 }]; // the start point of snakebody
 import { getInputDirection } from "./input.js";
+import { updateHighestScore } from "./food.js";
+
+function updateSnakeSpeed() {
+  let selection = document.querySelector("#speed").value;
+  console.log(selection);
+  if (selection === "0") {
+    // auto level
+    autoSpeed();
+  }
+  if (selection === "1") {
+    // 0.5x
+    SNAKE_SPEED = 2.5;
+  }
+  if (selection === "2") {
+    //1.0x
+    SNAKE_SPEED = 5;
+  }
+  if (selection === "3") {
+    //2.0x
+    SNAKE_SPEED = 5;
+  }
+}
+document.querySelector("#speed").addEventListener("change", updateSnakeSpeed);
+
+function autoSpeed() {
+  let index = 1;
+  let countdown = setInterval(function () {
+    console.log(index);
+    SNAKE_SPEED = snakeSpeed[index];
+    index++;
+    if (index >= 10) {
+      clearInterval(countdown);
+    }
+  }, 10000);
+}
 
 export function update() {
   //except to the head segment, segment shift their position by the previous segment
@@ -15,7 +51,7 @@ export function update() {
 
   // when moving y: +1 moven down; -1 moves up;
 
-  let snakeBodyExceptHead = snakeBody.slice(1)
+  let snakeBodyExceptHead = snakeBody.slice(1);
   let hitSelf = snakeBodyExceptHead.some(
     (segment) => segment.x === snakeBody[0].x && segment.y === snakeBody[0].y
   );
@@ -28,6 +64,7 @@ export function update() {
     hitSelf === true
   ) {
     alert("Game Over!");
+    updateHighestScore();
     location.reload();
   }
 }

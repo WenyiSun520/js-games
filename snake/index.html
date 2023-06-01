@@ -22,33 +22,73 @@
   </head>
   <body>
     <div
-      class="container container-fluid d-flex flex-column justify-content-center"
+      class="container container-fluid d-flex flex-row justify-content-center"
     >
-      <div class="title row">
-        <h1>Snake Game</h1>
-      </div>
-      <div id="game-board" class="row"></div>
-      <div class="result row">
-        <div class="score row d-flex flex-column justify-content-center">
-          <h2 class="row">Score</h2>
-          <div class="row"><span class="number">0</span></div>
+      <div class="gamebox col-6 d-flex flex-column justify-content-center">
+        <div class="title row">
+          <h1>Snake Game</h1>
+          <h2 class="countdown"></h2>
+        </div>
+        <div id="game-board" class="row"></div>
+        <div class="result row">
+          <div class="score col d-flex flex-column justify-content-center">
+            <h2 class="row">Score</h2>
+            <div class="row"><span class="number">0</span></div>
+          </div>
+          <div class="score col d-flex flex-column justify-content-center">
+            <h2 class="row">Highest Score</h2>
+            <div class="row"><span class="number-highest">0</span></div>
+          </div>
+        </div>
+        <div class="row-1">
+          <button id="replay">
+            <i class="fa-solid fa-rotate-right"></i>Restart
+          </button>
+          <button id="pause"><i class="fa-solid fa-pause"></i>Pause</button>
+        </div>
+        <div class="row-1">
+          <h3>Speed</h3>
+          <span></span>
+          <select name="speed" id="speed">
+            <option value="1">0.5x</option>
+            <option value="2" selected>1.0x</option>
+            <option value="3">2x</option>
+            <option value="0">Auto</option>
+          </select>
         </div>
       </div>
-      <div class="row-1">
-        <button id="replay">
-          <i class="fa-solid fa-rotate-right"></i>Restart
-        </button>
-        <button id="pause"><i class="fa-solid fa-pause"></i>Pause</button>
-      </div>
-      <div class="row-1">
-        <h3>Speed</h3>
-        <span></span>
-        <select name="speed" id="speed">
-          <option value="0">Auto</option>
-          <option value="1">0.5x</option>
-          <option value="2">1.5x</option>
-          <option value="3">2x</option>
-        </select>
+      <div class=".container-md rule-box col">
+        <ol>
+          <li>
+            Press any "W", "A", "S","D" or Arrow keys to
+            start
+          </li>
+          <li>You can use "WASD" or "Arrow" to control the snake</li>
+          <li>
+            There are 4-level of speed.
+            <ul>
+              <li>
+                "0.5x": snake will constantly move with the half speed of the
+                normal level
+              </li>
+              <li>
+                "1.0x": snake constantly move with the normal speed of the
+                normal level. It's also the default level
+              </li>
+              <li>
+                "2.0x": snake constantly move with the double speed of the
+                normal level
+              </li>
+              <li>
+                "Auto" level will auto increase the speed of snake time by time.
+                The highest speed will go over 2.0x! Try and challenge yourself!
+              </li>
+            </ul>
+          </li>
+          <li>
+            The snake can't do 180degree turns. 
+          </li>
+        </ol>
       </div>
     </div>
 

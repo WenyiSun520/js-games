@@ -8,6 +8,7 @@
 body {
   background-color: darkslateblue;
 }
+
 #game-board {
   background-color: whitesmoke;
   width: 50vmin;
@@ -20,14 +21,19 @@ body {
 .snake{
     background-color: blue;
     border: 0.25vmin solid black;
+    padding: 0;
 }
 .food{
     background-color: yellow;
     border: 0.25vmin solid black;
+     padding: 0;
 }
-.number {
+.number,.number-highest {
   font-size: 24px;
   font-weight: 500;
+}
+#speed {
+  color:black;
 }
 #replay, #pause {
   width: 200px;
