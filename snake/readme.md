@@ -1,5 +1,6 @@
 # Snake Game
 
+## Live Game Link: https://codesandbox.io/s/snake-game-l1h2gb
 ## Something I learned
 
 <img src='./img/game.png' alt="The game structure" />
