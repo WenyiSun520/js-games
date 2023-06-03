@@ -1,6 +1,7 @@
 # js-games
 This repo includes games developed by JavaScript or JS framework. 
  -  Tic-tac-toe
+ -  Memory Game
  -  Snake game
  -  Flappy Bird
 
