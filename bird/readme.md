@@ -12,3 +12,7 @@
 
 - Difference between append and appendChild: append can append node object and text, but appendChild only accept node object. append is an element method, appendChild is an node method.
 
+- A better understanding of element's position and how to use top, left, right, bottom to change the position.
+  - top, bottom, left, right: they are more like a position instead of a distance, which is also my misunderstanding. For example, "top: 200px" means the top point of the element is at the 200px place from the top of viewpoint.
+  -   top, bottom, left, right has NO effect on static position 
+
