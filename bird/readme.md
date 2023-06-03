@@ -1,5 +1,7 @@
 # Flappy Bird
 
+## Live can be found here: https://codesandbox.io/s/flappy-bird-xdmvys
+
 ## Something I learned:
 
 - [Element: getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect): return an object providing the size information of the element and its position related to the viewpoint. The oject includes such as top, left, right, width, and height. In this project, we use the method to check if the birdRect collide with the pipes by comparing their top, left, bottom, and right value.
