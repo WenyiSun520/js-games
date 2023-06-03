@@ -20,3 +20,8 @@ body {
   border: solid 1px #ddd;
   background-color: black;
 }
+
+.card-back, .card-front {
+    width: 100px;
+
+}

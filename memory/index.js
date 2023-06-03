@@ -16,6 +16,7 @@ let prevCard = null;
 function buildCard(color) {
   const newCard = document.createElement("div");
   newCard.classList.add("card");
+  // customize attribute syntax: data-* e.g: data-color, data-name, data-type...
   newCard.setAttribute("data-color", color);
 
   newCard.addEventListener("click", () => {
